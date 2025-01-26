@@ -5,31 +5,30 @@ import "./index.css";
 
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import Store from "./pages/Store";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
-import testes from "./assets/testes.png";
+import testes from "./assets/outrojogo.png";
 
 function App() {
   return (
-    <div className="relative min-h-screen text-white">
-      <div
-        className="absolute inset-0 bg-cover bg-center blur-lg "
-        style={{ backgroundImage: `url(${testes})` }}
-      ></div>
+    <div className="relatives h-screen text-white bg-gray-900">
+      <img
+        className="absolute inset-0 w-full h-full object-cover overflow-hidden z-0 blur-lg"
+        src={testes}
+        alt="background"
+      />
       <div>
         <Navbar />
       </div>
-      <div className="flex-1 flex-col md:flex-row md:ml-64">
+      <div className="flex-1 flex-col md:flex-row md:ml-64 h-screen">
         <MainLayout>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/store" element={<Store />} />
           </Routes>
         </MainLayout>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -4,11 +4,14 @@ const Navbar: React.FC = () => {
       <a href="./" className="py-2 px-4 hover:bg-white/20 rounded w-full">
         Home
       </a>
-      <a href="./about" className="py-2 px-4 hover:bg-white/20 rounded w-full">
-        About
+      <a
+        href="./library"
+        className="py-2 px-4 hover:bg-white/20 rounded w-full"
+      >
+        Library
       </a>
-      <a href="#" className="py-2 px-4 hover:bg-white/20 rounded w-full">
-        Services
+      <a href="./store" className="py-2 px-4 hover:bg-white/20 rounded w-full">
+        Store
       </a>
       <a href="#" className="py-2 px-4 hover:bg-white/20 rounded w-full">
         Contact

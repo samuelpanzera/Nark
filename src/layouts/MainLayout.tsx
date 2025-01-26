@@ -1,4 +1,3 @@
-
 const MainLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="flex flex-grow text-white relative z-10">

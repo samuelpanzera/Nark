@@ -1,29 +1,38 @@
 import React, { useState } from "react";
-import { Button } from "../components/ui/button";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { games } from "@/lib/utils";
 
-import { sendNotification } from "@tauri-apps/plugin-notification";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <h2 className="text-2xl font-bold ">Welcome to Nark Launcher</h2>
-      <p className="mt-4 text-gray-400">
-        Your optimized and clean game launcher experience starts here.
-      </p>
-      <Button
-        className="mt-4 bg-red-700"
-        onClick={() => {
-          return sendNotification({
-            title: "Tauri",
-            body: "Tauri is awesome!",
-          });
-        }}
-      >
-        Oi meu chapa
-      </Button>
-      
-    </div>
+    <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      slidesPerView={1}
+      navigation
+      className="w-4/5 self-center"
+      loop={true}
+    >
+      <SwiperSlide>
+        <img src={games[0].image} alt={games[0].name} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={games[1].image} alt={games[1].name} />
+      </SwiperSlide>
+    </Swiper>
   );
 };
 
 export default Home;
+
+/*
+      {games.map((game) => (
+          <SwiperSlide key={game.id}>
+            <img src={game.image} alt={game.name} className="w-3/5" />
+          </SwiperSlide>
+        ))}
+          */
