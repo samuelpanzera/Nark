@@ -23,10 +23,9 @@ const Home: React.FC<HomeProps> = ({ setBgImage }) => {
       loop={true}
       onSlideChange={(swiper) => setBgImage(games[swiper.realIndex].image)}
       onSwiper={(swiper) => setBgImage(games[swiper.realIndex].image)}
-
     >
       {games.map((game) => (
-        <SwiperSlide key={game.id} className="flex justify-center W" >
+        <SwiperSlide key={game.id} className="flex justify-center W">
           <img
             src={game.image}
             alt={game.name}

@@ -53,7 +53,26 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%
+    --radius: 0.5rem;
+
   }
 }
 @layer base {
+}
+
+.transition-transform {
+  transition: transform 5s ease-in-out !important;
+}
+
+.swiper-slide-active ~ .swiper-slide img {
+  animation: slide-right 5s forwards !important;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }

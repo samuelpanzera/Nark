@@ -114,3 +114,7 @@ button {
     background-color: #0f0f0f69;
   }
 }
+
+.transition-opacity {
+  transition: opacity 2s ease-in-out;
+} 
