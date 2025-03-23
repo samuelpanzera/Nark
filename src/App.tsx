@@ -21,17 +21,11 @@ function App() {
       {prevBgImage && (
         <img
           key={prevBgImage}
-          className="absolute inset-0 w-full h-full object-cover overflow-hidden z-0 blur-lg transition-opacity duration-1000 ease-in-out opacity-0"
+          className="absolute inset-0 w-full h-full object-cover overflow-hidden z-0 blur-lg"
           src={prevBgImage}
           alt="background"
         />
       )}
-      <img
-        key={bgImage}
-        className="absolute inset-0 w-full h-full object-cover overflow-hidden z-0 blur-lg transition-opacity duration-1000 ease-in-out"
-        src={bgImage}
-        alt="background"
-      />
       <div>
         <Navbar />
       </div>
